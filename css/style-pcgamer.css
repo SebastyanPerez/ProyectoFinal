@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --color-secundario: #191919;
+  --gray-color: #f3f3f3;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+.main-navbar {
+  border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar {
+  background-color: #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name {
+  color: #fff;
+}
+.main-navbar .top-navbar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu {
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i {
+  width: 20px;
+  text-align: center;
+  color: #2874f0;
+  font-size: 14px;
+}
+.main-navbar .navbar {
+  padding: 0px;
+  background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link {
+  padding: 8px 20px;
+  color: #000;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-navbar .top-navbar .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+header .highlight {
+  color: purple;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Product List */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  padding-left: 200px;
+  padding-top: 100px;
+  padding-right: 200px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+.product-card img {
+  cursor: pointer; /* Cambia el cursor a "pointer" cuando pases el mouse */
+}
+
+.product-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.product-card button {
+  background-color: #0a7eeb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-card button:hover {
+  background-color: #0723c0;
+}
+
+.product-card .specs {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+/* === Media Queries === */
+
+/* Dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  header p {
+    font-size: 12px;
+  }
+
+  .product-list {
+    padding: 10px;
+    grid-template-columns: 1fr; /* Una columna para móviles */
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-card h2 {
+    font-size: 16px;
+  }
+
+  .product-card .price {
+    font-size: 18px;
+  }
+
+  .product-card button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Dispositivos medianos (tablets) */
+@media (max-width: 1024px) {
+  .product-list {
+    padding: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el ancho mínimo */
+  }
+
+  .product-card h2 {
+    font-size: 17px;
+  }
+
+  .product-card .price {
+    font-size: 19px;
+  }
+}
+
+/* Dispositivos grandes (pantallas grandes) */
+@media (min-width: 1440px) {
+  .product-list {
+    padding: 40px 200px; /* Más espacio en pantallas grandes */
+  }
+
+  .product-card h2 {
+    font-size: 20px;
+  }
+
+  .product-card .price {
+    font-size: 22px;
+  }
+
+  .product-card button {
+    font-size: 15px;
+  }
+}
+/*productos card -2*/
+/* Product List */
+
+/* Product List */
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 50%;
+  max-height: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 100%; /* La imagen ocupa casi todo el ancho */
+    max-height: 90%; /* Ajuste proporcional al alto */
+
+  }
+
+  .close {
+    top: 10px;
+    right: 20px;
+    font-size: 30px; /* Tamaño más pequeño del botón */
+  }
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+  .modal-content {
+    max-width: 70%; /* Más ancho para tablets */
+    max-height: 100%; /* Ajuste del alto */
+    position: absolute;
+    top: 58%;
+    left: 32%;
+  }
+}
+
+/* Pantallas grandes (escritorios grandes) */
+@media (min-width: 1440px) {
+  .modal-content {
+    max-width: 40%; /* Reduce el ancho en pantallas muy grandes */
+    max-height: 80%;
+  }
+}
+
+/*sercicios chad*/
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.service {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.service i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center;
+  }
+
+  .service {
+    max-width: 80%; /* Ajusta el ancho de cada elemento */
+    margin-bottom: 15px;
+  }
+
+  .service i {
+    font-size: 36px; /* Reduce el tamaño del ícono */
+  }
+
+  .service h3 {
+    font-size: 16px; /* Reduce el tamaño del título */
+  }
+
+  .service p {
+    font-size: 13px; /* Reduce el tamaño del texto */
+  }
+}
+
+/* Ajustes para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+  .service i {
+    font-size: 32px; /* Reduce más el tamaño del ícono */
+  }
+
+  .service h3 {
+    font-size: 15px; /* Reduce más el tamaño del título */
+  }
+
+  .service p {
+    font-size: 12px; /* Reduce más el tamaño del texto */
+  }
+
+  .service {
+    max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 15px;
+  }
+}
+
+/* Estilos generales */
+footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 40px; /* Espacio superior */
+}
+
+.footer-container,
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+}
+.footer-container h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  border-bottom: 2px solid var(---color-cuarto);
+  padding-bottom: 10px;
+  color: var(----color-cuarto);
+  margin: 20px 0;
+}
+
+.footer-section,
+.footer-info div {
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1; /* Distribuye el espacio en pantallas grandes */
+}
+.footer-section i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: #ffffff;
+}
+.footer-section button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.footer-info iframe {
+  width: 200px;
+  height: 150px;
+}
+.footer-bottom p {
+  text-align: center;
+  padding-top: 1px;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 992px) {
+  /* Ajustes para tablets */
+  .footer-container,
+  .footer-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para dispositivos móviles */
+  .footer-section,
+  .footer-info div {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-info iframe {
+    width: 100%; /* Hace que el mapa ocupe el ancho completo */
+    height: 200px;
+  }
+  .footer-social a {
+    font-size: 1.2rem; /* Reduce el tamaño de los iconos sociales */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustes para móviles pequeños */
+  .footer-info iframe {
+    height: 150px;
+  }
+
+  .footer-section button {
+    padding: 5px; /* Reduce el tamaño del botón */
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 375px) {
+  /* Ajustes específicos para iPhone SE */
+  .footer-container,
+  .footer-info {
+    flex-direction: column; /* Coloca los elementos en columna */
+    padding: 10px 0; /* Reduce el espacio alrededor */
+  }
+
+  .footer-section,
+  .footer-info div {
+    flex-basis: 100%; /* Cada sección ocupa el ancho completo */
+    margin-bottom: 10px; /* Reduce el espacio entre secciones */
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem; /* Reduce el tamaño del texto del título */
+  }
+
+  .footer-section button {
+    padding: 5px 8px; /* Botones más compactos */
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+  }
+
+  .footer-info iframe {
+    width: 100%; /* Mapa ocupa todo el ancho disponible */
+    height: 150px; /* Ajusta la altura para el dispositivo */
+  }
+
+  .footer-social a {
+    font-size: 1.2rem; /* Ajusta el tamaño de los iconos sociales */
+    margin: 0 5px; /* Reduce el espacio entre los iconos */
+  }
+}

@@ -1,0 +1,25 @@
+.breadcrumb {
+    width: 100%;
+    line-height: initial;
+    padding: 30px 0 50px;
+}
+.breadcrumb ul {
+    justify-content: center;
+}
+.breadcrumb ul li {
+    position: relative;
+    margin-right: 10px;
+}
+.breadcrumb ul li:not(:first-child){
+    padding-left: 25px;
+
+}
+
+.breadcrumb ul li:not(:first-child)::before{
+    content: '>';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    
+}

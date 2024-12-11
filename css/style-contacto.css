@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  
+}
+:root {
+  
+  --color-secundario: #191919;
+  --gray-color: #f3f3f3;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+.main-navbar {
+  border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar {
+  background-color: #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name {
+  color: #fff;
+}
+.main-navbar .top-navbar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu {
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i {
+  width: 20px;
+  text-align: center;
+  color: #2874f0;
+  font-size: 14px;
+}
+.main-navbar .navbar {
+  padding: 0px;
+  background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link {
+  padding: 8px 20px;
+  color: #000;
+  font-size: 15px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main-navbar .top-navbar .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+/* Sección de Título */
+.section-title {
+
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilo del Formulario */
+.contact-form {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 5px;
+}
+
+/* Estilo General */
+.bg-light {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-text p {
+  font-size: 1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 576px) {
+  .section-title {
+      font-size: 1.5rem;
+  }
+
+  .contact-form {
+      padding: 20px;
+  }
+
+  .info-text p {
+      font-size: 0.9rem;
+  }
+}
+
+/*sercicios chad*/
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.service {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.service i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .services {
+      flex-direction: column; /* Alinea los elementos en una columna */
+      align-items: center;
+    }
+  
+    .service {
+      max-width: 80%; /* Ajusta el ancho de cada elemento */
+      margin-bottom: 15px;
+    }
+  
+    .service i {
+      font-size: 36px; /* Reduce el tamaño del ícono */
+    }
+  
+    .service h3 {
+      font-size: 16px; /* Reduce el tamaño del título */
+    }
+  
+    .service p {
+      font-size: 13px; /* Reduce el tamaño del texto */
+    }
+}
+  
+  /* Ajustes para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .service i {
+      font-size: 32px; /* Reduce más el tamaño del ícono */
+    }
+  
+    .service h3 {
+      font-size: 15px; /* Reduce más el tamaño del título */
+    }
+  
+    .service p {
+      font-size: 12px; /* Reduce más el tamaño del texto */
+    }
+  
+    .service {
+      max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+      padding: 15px;
+    }
+}
+
+
+/* Estilos generales */
+footer {
+    background-color: #222;
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: 40px; /* Espacio superior */
+  }
+  
+  .footer-container, .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+  }
+  .footer-container h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    border-bottom: 2px solid var(---color-cuarto);
+    padding-bottom: 10px;
+    color: var(----color-cuarto);
+    margin: 20px 0;
+  }
+  
+  .footer-section, .footer-info div {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1; /* Distribuye el espacio en pantallas grandes */
+  }
+  .footer-section i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    color: #ffffff;
+  }
+  .footer-section button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+  
+  .footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+  }
+ 
+
+  
+ 
+  
+  .footer-info iframe {
+    width: 200px;
+    height: 150px;
+  }
+  .footer-bottom p{
+    text-align:  center;
+    padding-top: 1px;
+  }
+  
+
+  
+  /* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 992px) {
+    /* Ajustes para tablets */
+    .footer-container, .footer-info {
+        flex-direction: column;
+    }
+}
+  
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+    .footer-section, .footer-info div {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-info iframe {
+      width: 100%; /* Hace que el mapa ocupe el ancho completo */
+        height: 200px;
+    }
+    .footer-social a {
+      font-size: 1.2rem; /* Reduce el tamaño de los iconos sociales */
+    }
+}
+  
+@media (max-width: 576px) {
+    /* Ajustes para móviles pequeños */
+    .footer-info iframe {
+        height: 150px;
+    }
+  
+    .footer-section button {
+      padding: 5px; /* Reduce el tamaño del botón */
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 375px) {
+    /* Ajustes específicos para iPhone SE */
+    .footer-container, .footer-info {
+      flex-direction: column; /* Coloca los elementos en columna */
+      padding: 10px 0; /* Reduce el espacio alrededor */
+    }
+  
+    .footer-section, .footer-info div {
+      flex-basis: 100%; /* Cada sección ocupa el ancho completo */
+      margin-bottom: 10px; /* Reduce el espacio entre secciones */
+    }
+  
+    .footer-section h3 {
+      font-size: 1.5rem; /* Reduce el tamaño del texto del título */
+    }
+  
+    .footer-section button {
+      padding: 5px 8px; /* Botones más compactos */
+      font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+    }
+  
+    .footer-info iframe {
+      width: 100%; /* Mapa ocupa todo el ancho disponible */
+      height: 150px; /* Ajusta la altura para el dispositivo */
+    }
+  
+    .footer-social a {
+      font-size: 1.2rem; /* Ajusta el tamaño de los iconos sociales */
+      margin: 0 5px; /* Reduce el espacio entre los iconos */
+    }
+}

@@ -1,0 +1,931 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+:root {
+  --color-primario: #b9ff66;
+    --color-secundario: #191919;
+    --gray-color: #f3f3f3;
+  ---color-teciario: #f88a0b;
+  --color-cuatro: #8f8f8f85;
+  --pading-container: 80px 0;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+.main-navbar {
+  border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar {
+  background-color: #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name {
+  color: #fff;
+}
+.main-navbar .top-navbar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu {
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i {
+  width: 20px;
+  text-align: center;
+  color: #2874f0;
+  font-size: 14px;
+}
+.main-navbar .navbar {
+  padding: 0px;
+  background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link {
+  padding: 8px 20px;
+  color: #000;
+  font-size: 15px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main-navbar .top-navbar .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+
+
+/*  carrusel*/
+
+.carousel-inner-waza img {
+    width: 100%;
+    
+    
+}
+
+  
+@media (max-width: 992px) {
+    .carousel-inner img {
+      height: 400px; /* Ajusta la altura para tablets */
+    }
+  
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+      height: 300px; /* Ajusta la altura para pantallas medianas (tablets verticales o móviles grandes) */
+    }
+}
+  
+@media (max-width: 576px) {
+    .carousel-inner img {
+      height: 200px; /* Altura para móviles pequeños */
+    }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para las flechas */
+    border-radius: 50%; /* Hacer que las flechas sean redondas */
+}
+
+.carousel {
+  max-width: 100%; /* Hace que el carrusel ocupe el 100% del contenedor */
+}
+
+.carousel-inner {
+  width: 100%; /* Ajuste interno */
+}
+
+.card {
+  margin: 10px; /* Margen moderado para mantener el espacio */
+  height: auto; /* Permitir que la altura se ajuste según el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el botón se mantenga en la parte inferior */
+}
+
+.card-img-top {
+  height: 250px; /* Altura de imagen para pantallas medianas */
+  object-fit: contain; /* Asegura que la imagen mantenga su relación de aspecto */
+  width: 100%; /* La imagen ocupa el ancho completo de la tarjeta */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; /* Centra el texto para mejor alineación */
+}
+
+/* Media query para pantallas de hasta 992px */
+@media (max-width: 992px) {
+  .card {
+    margin: 5px; /* Reduce el margen para pantallas más pequeñas */
+  }
+
+  .card-img-top {
+    height: 130px; /* Altura de imagen ajustada para pantallas más pequeñas */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Color de los botones de control */
+    width: 30px; /* Tamaño más pequeño para el icono de control */
+    height: 30px; /* Tamaño más pequeño para el icono de control */
+  }
+}
+
+/* Media query para pantallas muy pequeñas, como el iPhone SE */
+@media (max-width: 480px) {
+  .card {
+    margin: 2px; /* Margen aún más pequeño para móviles */
+  }
+
+  .card-img-top {
+    height: 100px; /* Tamaño de imagen más pequeño en móviles */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 25px; /* Tamaño más pequeño para el icono de control */
+    height: 25px; /* Tamaño más pequeño para el icono de control */
+  }
+}
+
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+/*las marcas*/
+.container2 {
+  margin-top: 30px;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.img-fluid {
+  width: 150px; /* Ancho fijo */
+  height: 100px; /* Alto fijo */
+  object-fit: contain; /* Mantiene la proporción sin cortar la imagen */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.row {
+  justify-content: center; /* Centra los elementos en la fila */
+}
+@media (max-width: 576px) {
+    .container2 h3 {
+      font-size: 20px; /* Reduce el tamaño del título */
+    }
+  
+    .img-fluid {
+      max-width: 120px; /* Reduce el ancho máximo para dispositivos más pequeños */
+    }
+  
+    .row .col-6 {
+      flex: 0 0 50%; /* Muestra dos columnas por fila */
+      max-width: 50%;
+    }
+}
+  
+  /* Estilos para pantallas extra pequeñas */
+@media (max-width: 400px) {
+    .container2 h3 {
+      font-size: 18px;
+    }
+  
+    .img-fluid {
+      max-width: 100px; /* Reduce más el tamaño de la imagen */
+    }
+  
+    .row .col-6 {
+      flex: 0 0 100%; /* Muestra una sola columna por fila */
+      max-width: 100%;
+    }
+}
+
+
+
+/*carrusel de microdonos */
+.carousel-container-microfonos {
+  position: relative;
+  width: 80%;
+  margin: 50px auto; /* Espacio de 50px arriba y abajo */
+  overflow: hidden;
+  padding: 50px 20px; /* Espaciado interno adicional para el contenido */
+  background: #ffffff; /* Fondo opcional para destacar el carrusel */
+  border-radius: 10px; /* Esquinas redondeadas opcionales */
+}
+
+.carousel-microfonos {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-microfonos {
+  min-width: 25%; /* Mostrar 4 productos por vista en pantallas grandes */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.product-card-microfonos {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.product-card-microfonos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.product-card-microfonos button {
+  
+  background: rgb(33, 92, 255);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(202, 201, 201);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .carousel-item-microfonos {
+    min-width: 33.33%; /* Mostrar 3 productos por vista */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item-microfonos {
+    min-width: 50%; /* Mostrar 2 productos por vista */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item-microfonos {
+    min-width: 100%; /* Mostrar 1 producto por vista */
+  }
+}
+
+/*categoria PC */
+/** hero main **/
+
+.containerCategoriaPC {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #2e2f35, #4a4c53);
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+.hero_main {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden; /* Asegura que el contenido extra no salga del contenedor */
+    width: 100%;
+    max-width: 500px;
+    min-height: 400px;
+    text-align: left; /* Alinea el texto al lado izquierdo */
+    color: rgb(223, 223, 223);
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease, background-size 1s ease; /* Aumenta la duración a 1 segundo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Efecto de Zoom en la Imagen */
+.hero_main:hover {
+  background-size: 120%; /* Aumenta el tamaño de la imagen al hacer hover */
+  transform: scale(1.02); /* Hace un pequeño zoom en el contenedor */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Mejora el efecto al pasar el cursor */
+}
+
+/* Superposición Oscura */
+.hero_main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    z-index: 1;
+}
+
+/* Texto dentro de las tarjetas */
+.hero_title,
+.hero_paragraph,
+.hero_cta {
+    position: relative;
+    z-index: 2; /* Coloca el texto sobre la capa oscura */
+    padding: 15px;
+    margin: 0;
+}
+
+/* Ajuste de texto */
+.hero_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.hero_paragraph {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.hero_cta {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--color-secundario);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex; /* Activar flexbox */
+    flex-direction: column; /* Asegurar que los elementos se apilen verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero_main {
+        max-width: 400px;
+        min-height: 350px;
+    }
+    .hero_title {
+        font-size: 1.3rem;
+    }
+    .hero_paragraph {
+        font-size: 0.9rem;
+    }
+    .hero_cta {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero_main {
+        max-width: 100%;
+        min-height: 300px;
+    }
+    .hero_title {
+        font-size: 1.2rem;
+    }
+    .hero_paragraph {
+        font-size: 0.8rem;
+    }
+    .hero_cta {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+/*carrusel de kits */
+.carousel-container-kits {
+  position: relative;
+  width: 80%;
+  margin: 50px auto; /* Espacio de 50px arriba y abajo */
+  overflow: hidden;
+  padding: 50px 20px; /* Espaciado interno adicional para el contenido */
+  background: #ffffff; /* Fondo opcional para destacar el carrusel */
+  border-radius: 10px; /* Esquinas redondeadas opcionales */
+}
+
+.carousel-kits {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-kits {
+  min-width: 25%; /* Mostrar 4 productos por vista en pantallas grandes */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.product-card-kits {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.product-card-kits img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.product-card-kits button {
+  
+  background: rgb(33, 92, 255);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.carousel-btn-kits {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(202, 201, 201);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-btn-kits.prev {
+  left: 10px;
+}
+
+.carousel-btn-kits.next {
+  right: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .carousel-item-kits {
+    min-width: 33.33%; /* Mostrar 3 productos por vista */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item-kits {
+    min-width: 50%; /* Mostrar 2 productos por vista */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item-kits {
+    min-width: 100%; /* Mostrar 1 producto por vista */
+  }
+}
+
+/* Sección principal */
+.subscribe-section {
+  background-color: #222; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 50px 20px; /* Espaciado interno */
+}
+
+/* Contenedor flex para el contenido */
+.subscribe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar en pantalla */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+  gap: 20px;
+}
+
+/* Texto */
+.subscribe-text {
+  max-width: 600px;
+}
+
+.subscribe-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Formulario */
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  flex: 1; /* Ocupa el espacio disponible */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* Imagen */
+.subscribe-image img {
+  max-width: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+#subscribeMessage {
+  font-size: 16px;
+  margin-top: 10px;
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  .subscribe-container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    text-align: center;
+  }
+
+  .subscribe-image img {
+    margin-top: 20px;
+  }
+}
+/* servicios bamba xd*/
+
+
+.services_card_content h3{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.services1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.services_container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service_card1 {
+  display: flex; /* Hace que el contenido dentro de .service_card se alinee en fila */
+  align-items: center; /* Alinea verticalmente los elementos */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(247, 2, 2, 0.1);
+  text-align: end;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service_card_content {
+  flex: 1; /* Hace que el texto ocupe el resto del espacio disponible */
+}
+
+.service_card:hover .service_icon {
+  filter: brightness(0) invert(1); /* Invertir el color del SVG */
+}
+.service_space {
+  padding: 15px;
+  height: 50%;
+}
+.service_icon {
+  border-radius: 20px;
+  background-color: #e6dede;
+  border-color: #191919 2px;
+  padding: 30px;
+}
+@media (max-width: 1024px) and (min-width: 601px) {
+  .services_container1 {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Reduce el ancho mínimo */
+    gap: 15px; /* Menor separación entre elementos */
+  }
+
+  .service_card1 {
+    padding: 20px; /* Mantén un padding adecuado */
+    flex-direction: row; /* Alineación horizontal */
+    text-align: left; /* Alineación del texto hacia la izquierda */
+  }
+
+  .service_card_content h3 {
+    font-size: 20px; /* Ajusta el tamaño del título */
+  }
+
+  .service_icon {
+    padding: 25px; /* Reduce el tamaño del icono */
+  }
+}
+@media (max-width: 768px) {
+    .services_container1 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se adapta a columnas más pequeñas */
+    }
+    
+    .service_card1 {
+      padding: 15px;
+      flex-direction: column; /* Alinea el contenido en columna para pantallas más estrechas */
+      text-align: center; /* Centra el texto */
+    }
+  
+    .service_icon {
+      padding: 20px; /* Ajusta el tamaño del icono */
+    }
+}
+  
+  /* Ajustes para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .services_container1 {
+      grid-template-columns: 1fr; /* Solo una columna en teléfonos */
+      gap: 15px; /* Menos espacio entre tarjetas */
+    }
+  
+    .service_card1 {
+      padding: 10px;
+      flex-direction: column; /* Alinea en columna */
+      text-align: center; /* Centra todos los elementos */
+    }
+  
+    .service_card_content h3 {
+      font-size: 1.2rem; /* Ajusta el tamaño del título */
+    }
+  
+    .service_icon {
+      padding: 20px;
+    }
+}
+
+/*sercicios chad*/
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.service {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.service i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .services {
+      flex-direction: column; /* Alinea los elementos en una columna */
+      align-items: center;
+    }
+  
+    .service {
+      max-width: 80%; /* Ajusta el ancho de cada elemento */
+      margin-bottom: 15px;
+    }
+  
+    .service i {
+      font-size: 36px; /* Reduce el tamaño del ícono */
+    }
+  
+    .service h3 {
+      font-size: 16px; /* Reduce el tamaño del título */
+    }
+  
+    .service p {
+      font-size: 13px; /* Reduce el tamaño del texto */
+    }
+}
+  
+  /* Ajustes para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .service i {
+      font-size: 32px; /* Reduce más el tamaño del ícono */
+    }
+  
+    .service h3 {
+      font-size: 15px; /* Reduce más el tamaño del título */
+    }
+  
+    .service p {
+      font-size: 12px; /* Reduce más el tamaño del texto */
+    }
+  
+    .service {
+      max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+      padding: 15px;
+    }
+}
+
+
+/* Estilos generales */
+footer {
+    background-color: #222;
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: 40px; /* Espacio superior */
+  }
+  
+  .footer-container, .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+  }
+  .footer-container h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    border-bottom: 2px solid var(---color-cuarto);
+    padding-bottom: 10px;
+    color: var(----color-cuarto);
+    margin: 20px 0;
+  }
+  
+  .footer-section, .footer-info div {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1; /* Distribuye el espacio en pantallas grandes */
+  }
+  .footer-section i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    color: #ffffff;
+  }
+  .footer-section button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+  
+  .footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+  } 
+  .footer-info iframe {
+    width: 200px;
+    height: 150px;
+  }
+  .footer-bottom p{
+    text-align:  center;
+    padding-top: 1px;
+  }
+  
+  
+  /* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 992px) {
+    /* Ajustes para tablets */
+    .footer-container, .footer-info {
+        flex-direction: column;
+    }
+}
+  
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+    .footer-section, .footer-info div {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-info iframe {
+      width: 100%; /* Hace que el mapa ocupe el ancho completo */
+        height: 200px;
+    }
+    .footer-social a {
+      font-size: 1.2rem; /* Reduce el tamaño de los iconos sociales */
+    }
+}
+  
+@media (max-width: 576px) {
+    /* Ajustes para móviles pequeños */
+    .footer-info iframe {
+        height: 150px;
+    }
+  
+    .footer-section button {
+      padding: 5px; /* Reduce el tamaño del botón */
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 375px) {
+    /* Ajustes específicos para iPhone SE */
+    .footer-container, .footer-info {
+      flex-direction: column; /* Coloca los elementos en columna */
+      padding: 10px 0; /* Reduce el espacio alrededor */
+    }
+  
+    .footer-section, .footer-info div {
+      flex-basis: 100%; /* Cada sección ocupa el ancho completo */
+      margin-bottom: 10px; /* Reduce el espacio entre secciones */
+    }
+  
+    .footer-section h3 {
+      font-size: 1.5rem; /* Reduce el tamaño del texto del título */
+    }
+  
+    .footer-section button {
+      padding: 5px 8px; /* Botones más compactos */
+      font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+    }
+  
+    .footer-info iframe {
+      width: 100%; /* Mapa ocupa todo el ancho disponible */
+      height: 150px; /* Ajusta la altura para el dispositivo */
+    }
+  
+    .footer-social a {
+      font-size: 1.2rem; /* Ajusta el tamaño de los iconos sociales */
+      margin: 0 5px; /* Reduce el espacio entre los iconos */
+    }
+}

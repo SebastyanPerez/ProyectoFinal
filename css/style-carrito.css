@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-secundario: #191919;
+  --gray-color: #f3f3f3;
+
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+.main-navbar {
+  border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar {
+  background-color: #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name {
+  color: #fff;
+}
+.main-navbar .top-navbar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu {
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i {
+  width: 20px;
+  text-align: center;
+  color: #2874f0;
+  font-size: 14px;
+}
+.main-navbar .navbar {
+  padding: 0px;
+  background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link {
+  padding: 8px 20px;
+  color: #000;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-navbar .top-navbar .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+.container-centered {
+    max-width: 1800px; /* Ajusta el ancho máximo del contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 50px; /* Añade espacio alrededor */
+}
+figure.itemside {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    gap: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+figure.itemside .aside {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+figure.itemside .info {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.img-sm {
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+    display: block; /* Asegúrate de que las imágenes se comporten como bloques */
+}
+.card {
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para mayor estilo */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Opcional: bordes sutiles */
+}
+
+.table-shopping-cart {
+    border-spacing: 0 10px; /* Espaciado entre filas */
+    width: 100%;
+}
+
+.table-shopping-cart th,
+.table-shopping-cart td {
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.btn-primary,
+.btn-success {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.coupon {
+    border-radius: 5px;
+}
+
+.price-wrap var {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.img-sm {
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.text-right {
+    text-align: right;
+}
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    /* Stack the items vertically */
+    figure.itemside {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Adjust image size for smaller screens */
+    .img-sm {
+        max-width: 60px;
+    }
+
+    /* Adjust Table Columns */
+    .table-shopping-cart th,
+    .table-shopping-cart td {
+        padding: 8px;
+    }
+
+    /* Make Buttons Full Width on Mobile */
+    .btn-light {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Layout for Tablets and Larger Devices */
+@media (min-width: 768px) and (max-width: 992px) {
+    .table-shopping-cart th,
+    .table-shopping-cart td {
+        padding: 12px;
+    }
+}
+
+
+/* LOS SERVICIOS XD*/
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+  }
+  
+  .service {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .service i {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .service p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Ajustes para pantallas medianas (tablets) */
+  @media (max-width: 768px) {
+      .services {
+        flex-direction: column; /* Alinea los elementos en una columna */
+        align-items: center;
+      }
+    
+      .service {
+        max-width: 80%; /* Ajusta el ancho de cada elemento */
+        margin-bottom: 15px;
+      }
+    
+      .service i {
+        font-size: 36px; /* Reduce el tamaño del ícono */
+      }
+    
+      .service h3 {
+        font-size: 16px; /* Reduce el tamaño del título */
+      }
+    
+      .service p {
+        font-size: 13px; /* Reduce el tamaño del texto */
+      }
+  }
+    
+    /* Ajustes para pantallas pequeñas (teléfonos móviles) */
+  @media (max-width: 480px) {
+      .service i {
+        font-size: 32px; /* Reduce más el tamaño del ícono */
+      }
+    
+      .service h3 {
+        font-size: 15px; /* Reduce más el tamaño del título */
+      }
+    
+      .service p {
+        font-size: 12px; /* Reduce más el tamaño del texto */
+      }
+    
+      .service {
+        max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 15px;
+      }
+  }
+
+/* Estilos generales */
+footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 40px; /* Espacio superior */
+}
+
+.footer-container,
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+}
+.footer-container h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  border-bottom: 2px solid var(---color-cuarto);
+  padding-bottom: 10px;
+  color: var(----color-cuarto);
+  margin: 20px 0;
+}
+
+.footer-section,
+.footer-info div {
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1; /* Distribuye el espacio en pantallas grandes */
+}
+.footer-section i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: #ffffff;
+}
+.footer-section button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.footer-info iframe {
+  width: 200px;
+  height: 150px;
+}
+.footer-bottom p {
+  text-align: center;
+  padding-top: 1px;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 992px) {
+  /* Ajustes para tablets */
+  .footer-container,
+  .footer-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para dispositivos móviles */
+  .footer-section,
+  .footer-info div {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-info iframe {
+    width: 100%; /* Hace que el mapa ocupe el ancho completo */
+    height: 200px;
+  }
+  .footer-social a {
+    font-size: 1.2rem; /* Reduce el tamaño de los iconos sociales */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustes para móviles pequeños */
+  .footer-info iframe {
+    height: 150px;
+  }
+
+  .footer-section button {
+    padding: 5px; /* Reduce el tamaño del botón */
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 375px) {
+  /* Ajustes específicos para iPhone SE */
+  .footer-container,
+  .footer-info {
+    flex-direction: column; /* Coloca los elementos en columna */
+    padding: 10px 0; /* Reduce el espacio alrededor */
+  }
+
+  .footer-section,
+  .footer-info div {
+    flex-basis: 100%; /* Cada sección ocupa el ancho completo */
+    margin-bottom: 10px; /* Reduce el espacio entre secciones */
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem; /* Reduce el tamaño del texto del título */
+  }
+
+  .footer-section button {
+    padding: 5px 8px; /* Botones más compactos */
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+  }
+
+  .footer-info iframe {
+    width: 100%; /* Mapa ocupa todo el ancho disponible */
+    height: 150px; /* Ajusta la altura para el dispositivo */
+  }
+
+  .footer-social a {
+    font-size: 1.2rem; /* Ajusta el tamaño de los iconos sociales */
+    margin: 0 5px; /* Reduce el espacio entre los iconos */
+  }
+}
+
+

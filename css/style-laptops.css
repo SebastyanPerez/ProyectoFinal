@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+:root{
+
+    --color-primario: #b9ff66;
+    --color-secundario: #191919;
+    --gray-color: #f3f3f3;
+    ---color-teciario: #f88a0b;
+    ---color-cuarto:#8f8f8f85;
+
+    --pading-container: 80px 0;
+
+}
+
+body,
+input,
+textarea,
+button{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.main-navbar {
+  border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar {
+  background-color: #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name {
+  color: #fff;
+}
+.main-navbar .top-navbar .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu {
+  padding: 0px 0px;
+  border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i {
+  width: 20px;
+  text-align: center;
+  color: #2874f0;
+  font-size: 14px;
+}
+.main-navbar .navbar {
+  padding: 0px;
+  background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link {
+  padding: 8px 20px;
+  color: #000;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-navbar .top-navbar .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+/* Contenedor principal */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Ajuste de contenedor por tamaño de pantalla */
+@media (min-width: 576px) {
+  .container, .container-sm {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+      max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+      max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1140px;
+  }
+}
+
+/* Estructura de filas */
+/* Estructura de filas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+
+/* Estilo de fondo para la barra de filtros */
+.bg-secondary {
+  background-color: #f5f5f5;
+  padding-right: 10px;
+}
+
+/* Títulos de la sección de filtrado */
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+/* Estilos de checkbox */
+.custom-control {
+  position: relative;
+  display: block;
+  padding-left: 1.5rem;
+}
+
+.custom-checkbox .custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+}
+
+.custom-control-label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-color: #f8f9fa;
+  border: 1px solid #adb5bd;
+}
+
+.custom-control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* Layout de checkbox */
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* Estilos para contadores (badges) */
+.badge {
+  padding: 0.5em 0.75em;
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 1;
+  color: #212529;
+  background-color: #0a5dac;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.border {
+  border: 1px solid #dee2e6;
+}
+
+.font-weight-normal {
+  font-weight: 400;
+}
+
+/* Contenedor de productos en cuadrícula */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+  gap: 20px; /* Espacio entre los productos */
+  margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta de producto */
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación en hover */
+}
+
+/* Imagen del producto */
+.product-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estado del producto (disponibilidad) */
+.product-status {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Título del producto */
+.product-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Precio del producto */
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Botón de añadir al carrito */
+.btn {
+  background-color: #002bea;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #273688;
+}
+
+.product-card {
+transition: opacity 0.3s, transform 0.3s;
+}
+
+.product-card.hidden {
+opacity: 0;
+transform: scale(0.95);
+pointer-events: none;
+}
+/* Consultas para ajustar columnas en dispositivos móviles */
+@media (max-width: 1200px) {
+  .product-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 productos por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+      grid-template-columns: 1fr; /* 1 producto por fila en pantallas muy pequeñas */
+  }
+}
+
+
+
+
+
+
+
+
+
+/*SEGUNDO FILTRADOR PRUEBA*/
+
+/* LOS SERVICIOS XD*/
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.service {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.service i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .services {
+      flex-direction: column; /* Alinea los elementos en una columna */
+      align-items: center;
+    }
+  
+    .service {
+      max-width: 80%; /* Ajusta el ancho de cada elemento */
+      margin-bottom: 15px;
+    }
+  
+    .service i {
+      font-size: 36px; /* Reduce el tamaño del ícono */
+    }
+  
+    .service h3 {
+      font-size: 16px; /* Reduce el tamaño del título */
+    }
+  
+    .service p {
+      font-size: 13px; /* Reduce el tamaño del texto */
+    }
+}
+  
+  /* Ajustes para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .service i {
+      font-size: 32px; /* Reduce más el tamaño del ícono */
+    }
+  
+    .service h3 {
+      font-size: 15px; /* Reduce más el tamaño del título */
+    }
+  
+    .service p {
+      font-size: 12px; /* Reduce más el tamaño del texto */
+    }
+  
+    .service {
+      max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+      padding: 15px;
+    }
+}
+
+
+/* Estilos generales */
+footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 40px; /* Espacio superior */
+}
+
+.footer-container, .footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+}
+.footer-container h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  border-bottom: 2px solid var(---color-cuarto);
+  padding-bottom: 10px;
+  color: var(----color-cuarto);
+  margin: 20px 0;
+}
+
+.footer-section, .footer-info div {
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1; /* Distribuye el espacio en pantallas grandes */
+}
+.footer-section i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: #ffffff;
+}
+.footer-section button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+.footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+.footer-info iframe {
+  width: 200px;
+  height: 150px;
+}
+.footer-bottom p{
+  text-align:  center;
+  padding-top: 1px;
+}
+
+
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 992px) {
+  /* Ajustes para tablets */
+  .footer-container, .footer-info {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para dispositivos móviles */
+  .footer-section, .footer-info div {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+  }
+
+  .footer-info iframe {
+    width: 100%; /* Hace que el mapa ocupe el ancho completo */
+      height: 200px;
+  }
+  .footer-social a {
+    font-size: 1.2rem; /* Reduce el tamaño de los iconos sociales */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustes para móviles pequeños */
+  .footer-info iframe {
+      height: 150px;
+  }
+
+  .footer-section button {
+    padding: 5px; /* Reduce el tamaño del botón */
+      font-size: 0.9rem;
+  }
+}
+@media (max-width: 375px) {
+  /* Ajustes específicos para iPhone SE */
+  .footer-container, .footer-info {
+    flex-direction: column; /* Coloca los elementos en columna */
+    padding: 10px 0; /* Reduce el espacio alrededor */
+  }
+
+  .footer-section, .footer-info div {
+    flex-basis: 100%; /* Cada sección ocupa el ancho completo */
+    margin-bottom: 10px; /* Reduce el espacio entre secciones */
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem; /* Reduce el tamaño del texto del título */
+  }
+
+  .footer-section button {
+    padding: 5px 8px; /* Botones más compactos */
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+  }
+
+  .footer-info iframe {
+    width: 100%; /* Mapa ocupa todo el ancho disponible */
+    height: 150px; /* Ajusta la altura para el dispositivo */
+  }
+
+  .footer-social a {
+    font-size: 1.2rem; /* Ajusta el tamaño de los iconos sociales */
+    margin: 0 5px; /* Reduce el espacio entre los iconos */
+  }
+}
